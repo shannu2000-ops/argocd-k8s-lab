@@ -8,7 +8,7 @@ metadata:
     tier: backend
 
 spec:
-  replicas: 3
+  replicas: 1
 
   selector:
     matchLabels:
@@ -29,7 +29,7 @@ spec:
             - containerPort: 8080
 
           envFrom:
-            - configMapRef:
+            - configMapRef:i
                  name: backend-config    
             - secretRef:
                   name: backend-secret       
